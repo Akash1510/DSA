@@ -1075,8 +1075,8 @@ int main()
 
 // Quick Sort  : -
 
-/*
 
+/*
 int partition(int arr[],int s,int e ){
 
   int pivot =arr[s];
@@ -1145,6 +1145,7 @@ int main(){
   cout<<endl;
   return 0;
 }
+
 */
 // Subset And Subsequences
 
