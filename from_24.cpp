@@ -2041,77 +2041,77 @@ int main() {
 */
 
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
 
-// Function to find the maximum number in the array
-int findMax(std::vector<int>& arr) {
-    int max = arr[0];
-    for (int i = 1; i < arr.size(); ++i) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-    }
-    return max;
-}
+// // Function to find the maximum number in the array
+// int findMax(std::vector<int>& arr) {
+//     int max = arr[0];
+//     for (int i = 1; i < arr.size(); ++i) {
+//         if (arr[i] > max) {
+//             max = arr[i];
+//         }
+//     }
+//     return max;
+// }
 
-// Using counting sort to sort elements based on significant places 
-void countingSort(vector<int>& arr, int exp) {
-    const int n = arr.size();
-    vector<int> output(n, 0);
-    vector<int> count(10, 0);
+// // Using counting sort to sort elements based on significant places 
+// void countingSort(vector<int>& arr, int exp) {
+//     const int n = arr.size();
+//     vector<int> output(n, 0);
+//     vector<int> count(10, 0);
 
-    // Count occurrences unit places is the present 
-    for (int i = 0; i < n; i++) {
-        count[(arr[i] / exp) % 10]++;
-    }
+//     // Count occurrences unit places is the present 
+//     for (int i = 0; i < n; i++) {
+//         count[(arr[i] / exp) % 10]++;
+//     }
 
-    // Update count[i] to store actual position of this digit in output[]
-    for (int i = 1; i < 10; i++) {
-        count[i] += count[i - 1];
-    }
+//     // Update count[i] to store actual position of this digit in output[]
+//     for (int i = 1; i < 10; i++) {
+//         count[i] += count[i - 1];
+//     }
 
-    // Build the output array
-    for (int i = n - 1; i >= 0; i--) {
-        output[count[(arr[i] / exp) % 10] - 1] = arr[i];
-        count[(arr[i] / exp) % 10]--;
-    }
+//     // Build the output array
+//     for (int i = n - 1; i >= 0; i--) {
+//         output[count[(arr[i] / exp) % 10] - 1] = arr[i];
+//         count[(arr[i] / exp) % 10]--;
+//     }
 
-    // Copy the output array to arr[], so that arr[] now contains sorted numbers
-    for (int i = 0; i < n; i++) {
-        arr[i] = output[i];
-    }
-}
+//     // Copy the output array to arr[], so that arr[] now contains sorted numbers
+//     for (int i = 0; i < n; i++) {
+//         arr[i] = output[i];
+//     }
+// }
 
-// Radix Sort function
-void radixSort(std::vector<int>& arr) {
-    int max = findMax(arr);
+// // Radix Sort function
+// void radixSort(std::vector<int>& arr) {
+//     int max = findMax(arr);
 
-    // Do counting sort for every digit
-    for (int exp = 1; max / exp > 0; exp *= 10) {
-        countingSort(arr, exp);
-    }
-}
+//     // Do counting sort for every digit
+//     for (int exp = 1; max / exp > 0; exp *= 10) {
+//         countingSort(arr, exp);
+//     }
+// }
 
-int main() {
-    // Example usage
-    // std::vector<int> arr = {170, 45, 75, 90, 802, 24, 2, 66};
-    vector<int>arr = {3,6,1,8,4,2,0,5,12};
+// int main() {
+//     // Example usage
+//     // std::vector<int> arr = {170, 45, 75, 90, 802, 24, 2, 66};
+//     vector<int>arr = {3,6,1,8,4,2,0,5,12};
     
-    std::cout << "Original array: ";
-    for (int num : arr) {
-        std::cout << num << " ";
-    }
-    std::cout << std::endl;
+//     std::cout << "Original array: ";
+//     for (int num : arr) {
+//         std::cout << num << " ";
+//     }
+//     std::cout << std::endl;
 
-    radixSort(arr);
+//     radixSort(arr);
 
-    std::cout << "Sorted array: ";
-    for (int num : arr) {
-        std::cout << num << " ";
-    }
-    std::cout << std::endl;
+//     std::cout << "Sorted array: ";
+//     for (int num : arr) {
+//         std::cout << num << " ";
+//     }
+//     std::cout << std::endl;
 
-    return 0;
-}
+//     return 0;
+// }
