@@ -2,6 +2,59 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+
+// Creation of the Graph
+
+/*
+vector<vector<int>> printadjency(int n, int m,vector<vector<int>>&edges){
+
+        vector<vector<int>>solution(n);
+        for(int i=0;i<n;i++){
+            solution[i].push_back(i);
+        }
+
+        for(int i=0;i<n;i++){
+            int u = edges[i][0];
+            int v = edges[i][1];
+
+            solution[u].push_back(v);
+            solution[v].push_back(u);
+        }
+        return solution;
+}
+
+
+
+int main(){
+    int n;
+    cout <<"Enter your Nodes "<<endl;
+    cin>>n;
+    int m;
+    cout<<"Enter your Edegs "<<endl;
+    cin>>m;
+    vector<vector<int>>edges(m,{0,0});
+        for(int i=0;i<m;i++){
+            cin>>edges[i][0];
+            cin>>edges[i][1];    
+    }
+    
+    vector<vector<int>>solution  = printadjency(n,m,edges);
+    
+    for(auto i:solution){
+        for(auto j:i){
+            cout<<j<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
+}
+
+*/
+
+
+//Creation Of Adjency List
+/*
 class Graph{
     public:
     unordered_map<int,list<int>>adj;
@@ -14,15 +67,8 @@ class Graph{
         }
     }
 
-    void printadj(){
-        for(auto i:adj){
-            cout<<i.first<<"->";
-            for(auto j:i.second){
-                cout <<j<<" ";
-            }
-            cout<<endl;
-        }
-    }
+   
+   
 
 };
 
@@ -71,4 +117,11 @@ int main(){
     return 0;
 
 }
+
+
+*/
+
+
+
+
 
