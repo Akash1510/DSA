@@ -55,6 +55,7 @@ Queue(int n){
   rear = 0;
   
 }
+
  bool isempty(){
    if(front == rear ){
      return true;
@@ -125,14 +126,15 @@ int main(){
 
 // ---------------------------------- Circualr Queue -----------------------------
 
+
 /*
 class CircularQueue{
+
+public:
 int *arr;
 int front;
 int rear;
 int size;
-
-public:
 CircularQueue(int n){
   size = n;
   arr = new int[size];
@@ -171,7 +173,7 @@ int Pop(){
     front = rear = -1;
     
   }
-  else if(front == (size-1) ){
+  else if(front == size-1 ){
        front = 0;
   }
   else {
@@ -190,7 +192,7 @@ int Front (){
 }
 
 bool isempty(){
-  if(front == rear ){
+  if(front == -1 ){
     return true;
   }
   else{
@@ -219,8 +221,8 @@ int main(){
   
 }
 
-*/
 
+*/
 
 //-------------------------------- Doubly Ended Queue ------------------------------------------------------------
 /*
@@ -853,3 +855,753 @@ int main(){
   return 0;
 }
 */
+
+//using Array 
+
+// class Queue{
+//   public:
+//   int *arr;
+//   int front;
+//   int rear;
+//   int size;
+//   Queue(int n){
+//     size = n;
+//     arr = new int[size];
+//     front = 0;
+//     rear = 0;
+//   }
+
+//   void push(int data){
+//     if(rear == size){
+//       cout <<"Queue is Full " <<endl;
+//     }
+//     else{
+//       arr[rear] = data;
+//       rear++;
+//     }
+//   }
+
+//   int pop(){
+
+//     if(front == rear){
+//       cout <<"Queue is Empty"<<endl;
+//       return -1;
+//     }
+//     else{
+//       int x = arr[front];
+//       arr[front] = -1;
+//       front ++;
+
+//       if(rear == front){
+//         front = 0;
+//         rear = 0;
+//       }
+//       return x;
+//     }
+//   }
+
+// bool is_empty(){
+//   if(front == rear ){
+//     return true;
+//   }
+//   else{
+//     return false;
+//   }
+
+// }
+
+// bool is_Full(){
+//   if(rear == size-1){
+//     return true;
+//   }
+//   else{
+//     return false;
+//   }
+// }
+
+// int Front(){
+//   if(rear == front ){
+//     return -1;
+//   }
+//   else{
+//     return arr[front];
+//   }
+// }
+
+// };
+
+
+// int main(){
+//   Queue q(4);
+//   q.push(45);
+//   q.push(4);
+//   q.push(43);
+//   q.push(34);
+
+//   while(!q.is_empty()){
+//     cout <<q.Front()<<endl;
+//     q.pop();
+//   }
+
+// }
+
+// using Linked List/
+/*
+class node{
+  public:
+  int data;
+  node* next;
+  node(int data){
+    this->data = data;
+    this->next = NULL;
+  }
+
+};
+
+class Queue{
+  public:
+   node* front;
+   node* rear;
+  Queue(){
+    this->front = NULL;
+    this->rear  = NULL;
+    
+  }
+
+  void push(int data){
+    node* newnode  = new node(data);
+    if(rear == NULL){
+      rear = newnode;
+      front = newnode;
+    }
+    else{
+      rear->next = newnode;
+      rear = newnode;
+    }
+    
+   }
+
+   void pop(){
+    if(front  == NULL){
+      return;
+    }
+
+    else{
+      node* temp = front;
+      front = front->next;
+      delete temp;
+    }
+
+   }
+
+bool is_empty(){
+  if(front == NULL ){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+ int Front(){
+  if(rear == NULL){
+    return -1;
+  }
+  else{
+    
+    return front->data;
+  }
+ }
+
+
+};
+
+int main(){
+  Queue q;
+  q.push(23);
+  q.push(433);
+  q.push(34);
+  q.push(89);
+  q.push(0);
+  q.push(34);
+  // cout<<q.Front();
+  while(!q.is_empty()){
+    cout<<q.Front()<<" "<<endl;
+    q.pop();
+  }
+}
+*/
+
+
+// class Dequeue{
+//   public:
+//   int front;
+//   int rear;
+//   int *arr;
+//   int size;
+//   Dequeue(int n){
+//     this->size = n;
+//     front = -1;
+//     rear = -1;
+//     arr = new int[size];
+
+//   }
+
+//   void pushf(int d){
+//     if(is_full()){
+//       cout<<"Queue is Full "<<endl;
+//     }
+//     else if(is_empty()){
+//       front = rear = 0;
+//     }
+//     else if(front == 0 && rear != size-1){
+//       front = size - 1;
+//     }
+//     else{
+//       front--;
+//     }
+//     arr[front] = d;
+//   }
+
+//   void pushr(int d){
+//     if(is_full()){
+//       cout<<"Queeu is Full "<<endl;
+//     }
+//     else if(is_empty()){
+//       front  = rear = 0;
+//     }
+//     else if (rear == size-1 && front != 0)
+//     {
+//       rear = 0;
+//     }
+//     else{
+//       rear++;
+//     }
+//     arr[rear] = d;
+//   }
+
+//   int popf(){
+//     if(is_empty()){
+//       cout <<"Queue is Empty "<<endl;
+//       return -1;
+//     }
+//     int ans = arr[front];
+//     arr[front] = -1;
+
+//     if(front == rear ){
+//       front = rear = -1;
+//     }
+//     else if(front == size-1 ){
+//       front = 0;
+//     }
+//     else{
+//       front++;
+//     }
+//      return ans;
+//   }
+
+
+//   int popr(){
+//     if(is_empty()){
+//       cout<<"empty"<<endl;
+//       return -1;
+//     }
+//     int ans = arr[rear];
+//     arr[rear] = -1;
+//     if(front == rear ){
+//       front = rear = -1;
+//     }
+//     else if(rear == 0){
+//       rear = size-1;
+//     }
+//     else{
+//       rear--;
+//     }
+//     return ans;
+//   }
+
+//   int getFront(){
+//     if(is_empty()){
+//       return -1;
+//     }
+//     else{
+//       return arr[front];
+//     }
+//   }
+
+//   int getRear(){
+//     if(is_empty())
+//     {
+//       return -1;
+//     }
+//     else{
+//       return arr[rear];
+//     }
+//   }
+
+//   bool is_empty(){
+//     if(front == -1){
+//       return true;
+//     }
+//     else{
+//       return false;
+//     }
+//   }
+
+
+//   bool is_full(){
+//     if((front == 0 && rear == (size-1)) || (front != 0 && rear == (front-1)%(size-1)) ){
+//       return true;
+//     }
+//     else{
+//       return false;
+//     }
+//   }
+
+// };
+
+// int main(){
+//   Dequeue q(6);
+//  q.pushf(5);
+//  q.pushf(6);
+//  q.pushf(7);
+//  q.pushr(8);
+//  q.pushr(9);
+//  q.pushr(10);
+//  while(!q.is_empty()){
+//   cout<<q.getRear()<<" ";
+//   q.popr();
+//  }
+// }
+
+
+// class node{
+//   public:
+//   int data;
+//   node* next;
+//   node* prev;
+//   node(int data){
+//     this->data = data;
+//     this->next = NULL;
+//     this->prev= NULL;
+//   }
+// };
+
+// class Dequeue{
+//   public:
+//   node* front;
+//   node* rear;
+//   Dequeue(){
+//     front = NULL;
+//     rear = NULL;
+  
+//   }
+
+//   void push_front(int data){
+//      node* newnode = new node(data);
+//      if(front == NULL){
+//       front = newnode;
+//       rear = newnode;
+//      }
+//      else{
+//       front->prev = newnode;
+//       newnode->next = front;
+//       front = newnode;
+
+//      }
+//   }
+
+//   void push_back(int data){
+//     node* newnode = new node(data);
+//     if(rear == NULL){
+//       front = newnode;
+//       rear = newnode;
+//     }
+//     else{
+//       rear->next = newnode;
+//       newnode->prev  = rear;
+//       rear = newnode;
+    
+//     }
+//   }
+
+//   int pop_front(){
+//     if(front == NULL){
+//       cout <<"Queue is Empty "<<endl;
+//       return -1;
+//     }
+//     else{
+//       node* temp = front;
+//       front = temp->next;
+//       front->prev = NULL;
+//       delete temp;
+//     }
+
+//   }
+
+//   int pop_back(){
+//     if(rear == NULL){
+//       cout <<"Queue is Empty "<<endl;
+//       return -1;
+//     }
+//     else{
+//       node* temp = rear;
+//       rear = temp->prev;
+//       rear->next = NULL;
+//       delete temp;
+      
+//     }
+    
+//   }
+
+
+//   int get_front(){
+//     if(front == NULL){
+//       return -1;
+//     }
+//     else{
+//       return front->data;
+//     }
+//   }
+
+//   int getRear(){
+//     if(rear == NULL){
+//       return -1;
+//     }
+//     else{
+//       return rear->data;
+//     }
+//   }
+
+
+// void printf(){
+//   node*  temp = front;
+//   while(temp != NULL){
+//     cout <<temp->data<<" ";
+//     temp = temp->next;
+//   }
+
+// }
+
+// void printr(){
+//   node* temp = rear;
+//   while(temp != NULL){
+//     cout <<temp->data<<" ";
+//     temp= temp->prev;
+//   }
+// }
+// };
+
+// int main(){
+//   Dequeue  q;
+//   q.push_back(8);
+//   q.push_back(9);
+//   q.push_back(10);
+//   q.push_back(11);
+//   q.push_back(12);
+//   q.push_back(34);
+//   q.push_back(11);
+//   q.push_back(8);
+//   q.push_back(1);
+//   q.push_back(0);
+ 
+//   q.printf();
+//  q.printr();
+//   return 0;
+
+// }
+
+
+
+
+
+/*
+
+class node{
+  public:
+  int data;
+  node* next;
+  node(int data){
+    this->data = data;
+    this->next = NULL;
+  }
+};
+
+class Circualr_Queue{
+  public:
+  node* front;
+  node* rear;
+  Circualr_Queue(){
+    this->front = NULL;
+    this->rear = NULL;
+  }
+
+  void  push(int data){
+    node* newnode = new node(data);
+    if(front == NULL){
+      front = newnode;
+      rear = newnode;
+    }
+    else{
+      rear->next = newnode;
+      rear = newnode;
+    }
+    rear->next = front;
+  
+}
+
+int pop(){
+  if(front == NULL){
+    return -1;
+  }
+  else{
+    node* temp = front;
+    front = temp->next;
+    delete temp;
+  }
+  return 1;
+}
+
+int get_front(){
+  if(front == NULL){
+    return -1;
+  }
+  else{
+    return front->data;
+  }
+}
+
+void print(){
+  node* temp = front;
+  while(temp != NULL){
+    cout<<temp->data<<" ";
+    temp = temp->next;
+    if(temp == front){
+      temp = NULL;
+
+    }
+  }
+}
+
+};
+
+int main(){
+  Circualr_Queue q;
+  q.push(12);
+  q.push(3);
+  q.push(45);
+  q.push(4);
+  q.push(9);
+  // cout<<q.get_front()<<" ";
+  q.print();
+}
+*/
+
+
+/*
+class Priority_queue{
+  public:
+  int arr[100];
+  int size;
+  Priority_queue(){
+    arr[0] = -1;
+    size = 0;
+  }
+
+  void push(int data){
+    size= size +1;
+    int index = size;
+    arr[index] = data;
+    while(index>1){
+      int parent = index/2;
+      if(arr[parent] < arr[index]){
+        swap(arr[parent],arr[index]);
+        index = parent;
+      }
+      else{
+        return ;
+      }
+
+    }
+  }
+
+  void pop(){
+    if(size == 0){
+      cout<<"Queue is EMpty "<<endl;
+    }
+    arr[1] = arr[size];
+    size--; 
+    int i = 1;
+    while (i<size)
+    {
+      int leftindex = 2*i;
+      int rightindex = 2*i+1;
+      if(leftindex<=size && arr[i] < arr[leftindex]){
+        swap(arr[i],arr[leftindex]);
+        i = leftindex;
+      }
+      else if(rightindex <= size && arr[i] < arr[rightindex]){
+        swap(arr[i],arr[rightindex]);
+        i = rightindex;
+      }
+      else{
+        return;
+      }
+    }
+    
+  }
+
+  void Descending(int arr[],int n, int i){
+   int  largest = i;
+    int left = 2*i;
+    int right = 2*i+1;
+    if(left<=n && arr[largest]<arr[left]){
+      largest = left;
+    }
+    else if(right <=n && arr[largest]>arr[right]){
+      largest = right;
+    }
+    if(largest != i){
+      swap(arr[largest],arr[i]);
+      Descending(arr,n,largest);
+    }
+
+  }
+
+  void Ascending(int arr[],int n, int i){
+    int smallest = i;
+    int left = 2*i+1;
+    int right = 2*i+2;
+    if(left < n && arr[smallest]>arr[left]){
+      smallest = left;
+    }
+    if(right < n && arr[smallest]>arr[right]){
+      smallest  = right;
+    }
+    if(smallest != i){
+      swap(smallest,arr[i]);
+      Ascending(arr,n,smallest);
+
+    }
+
+  }
+
+  void heapsort(int arr[],int n){
+    int size = n;
+    while(size>1){
+      swap(arr[size],arr[1]);
+      size --;
+      Descending(arr,size,1);
+    }
+  }
+
+  void print(){
+    for(int i=1 ;i<=size;i++){
+      cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+  }
+
+};
+
+*/
+
+
+
+//priority Queue
+
+class Priority_queue{
+  public:
+  int *arr;
+  int size;
+  int front;
+  int rear;
+ Priority_queue(int n ){
+  size = n;
+  front = -1;
+  rear = -1;
+  arr = new int[size];
+
+
+ }
+bool is_empty(){
+  if(front == -1){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+bool is_Full(){
+  if((front == 0 && rear == (size-1) ) || rear == (front-1)%(size-1)){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+void push(int data){
+  if(is_Full()){
+    cout <<"Queue is full "<<endl;
+  }
+
+  else if(is_empty()){
+    front = rear = 0;
+    arr[rear] = data;
+  }
+  else{
+    int i = rear ;
+    while(i>= front && data > arr[i]){
+      arr[(i+1)%(size)] = arr[i];
+      i--;
+     }
+     rear = (rear+1)%(size);
+     arr[(i+1)%(size)] = data;
+
+  }
+  
+}
+
+int pop(){
+  if(is_empty()){
+    cout <<"Queue is Empty "<<endl;
+    return -1;
+  }
+  int ans = arr[front];
+  arr[front] = -1;
+  front++;
+
+  if(front == rear){
+    front = rear = -1;
+  }
+  else{
+    front = (front+1)%(size);
+  }
+  return ans;
+}
+
+int Top(){
+  if(is_empty()){
+    return -1;
+  }
+  else{
+    return arr[front];
+  }
+}
+};
+
+int main(){
+  Priority_queue q(5);
+  q.push(23);
+  q.push(45);
+  q.push(34);
+  q.push(56);
+  q.push(67);
+  while(!q.is_empty()){
+    cout <<q.Top()<<endl;
+    q.pop();
+  }
+  return 0;
+}

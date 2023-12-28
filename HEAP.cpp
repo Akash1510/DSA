@@ -8,7 +8,7 @@ using namespace std;
 
 
  // 1 
-/*
+
 class HEAP{
     public:
     int arr[100];
@@ -142,13 +142,13 @@ int main(){
 
      //creation of MIN heap
 
-    // for(int i = (n/2)-1 ; i>=0 ;i--){
-    //     MINheap(arr,n,i);
-    // }
-    // cout <<"THe minheap is "<<endl;
-    //  for(int i=1;i<=n;i++){
-    //     cout <<arr[i]<<" ";
-    // }
+    for(int i = (n/2)-1 ; i>=0 ;i--){
+        MINheap(arr,n,i);
+    }
+    cout <<"THe minheap is "<<endl;
+     for(int i=1;i<=n;i++){
+        cout <<arr[i]<<" ";
+    }
 
     //heap sort
     cout<<"After sorting the heap "<<endl;
@@ -161,7 +161,7 @@ int main(){
     return 0;
 }
 
-*/
+
 //2 heap implmentaion using stl
 
 
@@ -707,48 +707,48 @@ int main() {
 
 
 
-void  heapify(int arr[], int n ,int i){
-    int largest =i;
-    int left = 2*i;
-    int right = 2*i+1;
-    if(left <=n && arr[largest] <arr[left]){
-        largest = left;
-    }
-    if(right <= n && arr[largest] < arr[right]){
-        largest = right;
-    }
-    if(largest != i){
-        swap(arr[largest], arr[i]);
-        heapify(arr,n,largest);
-    }
-}
+// void  heapify(int arr[], int n ,int i){
+//     int largest =i;
+//     int left = 2*i;
+//     int right = 2*i+1;
+//     if(left <=n && arr[largest] <arr[left]){
+//         largest = left;
+//     }
+//     if(right <= n && arr[largest] < arr[right]){
+//         largest = right;
+//     }
+//     if(largest != i){
+//         swap(arr[largest], arr[i]);
+//         heapify(arr,n,largest);
+//     }
+// }
 
-void heapsort(int arr[],int n){
-    int size = n;
-    while(size>1){
-        swap(arr[size], arr[1]);
-        size--;
-        heapify(arr,size,1);
-    }
-}
+// void heapsort(int arr[],int n){
+//     int size = n;
+//     while(size>1){
+//         swap(arr[size], arr[1]);
+//         size--;
+//         heapify(arr,size,1);
+//     }
+// }
 
-int main(){
-    int arr[9] ={-1,44,33,11,55,77,90,40,99};
-    int n = 8;
-     //heapify fisrt  //creation of max heap  
-     for(int i = n/2;i>0;i--){
-        heapify(arr,n,i);
-     }
-     for(int i=1;i<n;i++){
-        cout << arr[i]<<" ";
-    }
-    //apply the heap sort
+// int main(){
+//     int arr[9] ={-1,44,33,11,55,77,90,40,99};
+//     int n = 8;
+//      //heapify fisrt  //creation of max heap  
+//      for(int i = n/2;i>0;i--){
+//         heapify(arr,n,i);
+//      }
+//      for(int i=1;i<n;i++){
+//         cout << arr[i]<<" ";
+//     }
+//     //apply the heap sort
 
-    heapsort(arr,n);
+//     heapsort(arr,n);
     
-    cout<<endl;
-    //sortted array is 
-    for(int i=1;i<=n;i++){
-        cout<<arr[i]<<" ";
-    }
-}
+//     cout<<endl;
+//     //sortted array is 
+//     for(int i=1;i<=n;i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }

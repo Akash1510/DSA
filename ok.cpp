@@ -656,6 +656,82 @@ PT resetendpt(PT p1, PT p2)
 
 
 // Final code for cohen suther land algorithm
+#include<iostream>
+using namespace std;
 
+class Stacks{
+    
+    public:
+    int *arr;
+    int top;
+    int size;
+    Stacks(int n){
+        size = n;
+        arr = new int[size];
+        top = -1;
+    }
+    bool is_empty(){
+        if(top == -1){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
+
+    bool is_Full()
+    {
+        if(top == size-1){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
+    void push(int data){
+        if(is_Full()){
+            cout<<"Stack is Overflow "<<endl;
+            return;
+        }
+        else{
+            top++;
+            arr[top] = data;
+        }
+    }
+
+    int pop(){
+        if(is_empty()){
+            cout<<"Stack is UnderFlow "<<endl;
+        }
+        int ans = arr[top];
+        arr[top] = -1;
+        top--;
+
+        return ans;
+    }
+
+    int Top(){
+        if(is_empty()){
+            return -1;
+        }
+        else{
+            return arr[top];
+        }
+    }
+
+};
+
+int main(){
+    Stacks q(4);
+    int e;
+    for(int i= 0;i<4;i++){
+        cin>>e;
+        q.push(e);
+    }
+    while(!q.is_empty()){
+        cout<<q.Top()<<endl;
+        q.pop();
+    }
+}
 
 

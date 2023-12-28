@@ -30,7 +30,7 @@ int main(){
 
 //Stack is Implimented by the UserDefind Class
 
-
+/*
 class Stack{
     public:
     int*arr;
@@ -102,6 +102,9 @@ int main(){
     }
     return 0;
 }
+
+*/
+
 
 // Implimentation of Two Stacks using the 1 Array
 
@@ -749,4 +752,4 @@ public:
     }
 };
 
-*/
+/*
