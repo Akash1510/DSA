@@ -2246,7 +2246,7 @@ int main(){
 
 
 
-/*
+
 class node{
     public:
     int data;
@@ -2371,124 +2371,127 @@ int main(){
     // node* listback = linked_listformback(head);
     // printformback(listback);
     cout<<endl;
-    // deletenode(1,listfront);
-    // printformfront(listfront);
+    deletenode(4,listfront);
+    printformfront(listfront);
     return 0;
 }
-*/
+
 
 // addition of Two polynomials
 
-// class node{
-//   public:
-//   int power;
-//   float coif;
-//   node* next ;
-//   node(int power,float c){
-//     this->power = power;
-//     this->coif = c;
-//     this->next = NULL;
-//   }
-// };
+/*
+class node{
+  public:
+  int power;
+  float coif;
+  node* next ;
+  node(int power,float c){
+    this->power = power;
+    this->coif = c;
+    this->next = NULL;
+  }
+};
 
-// node* linked_list(node*head){
-//     int pow;
-//     float c;
-//     int size;
-//     cout<<"ENter your size "<<endl;
-//     cin>>size;
-//     int i=0;
-//     node* tail = NULL;
-//     while(i<size){
-//         cout<<"Enter your coefficient "<<endl;
-//         cin>>c;
-//         cout<<"ENter your Power of "<<endl;
-//         cin>>pow;
-//         node* newnode = new node(pow,c);
-//         if(head == NULL){
-//             head = newnode ;
-//             tail = newnode;
-//         }
-//         else{
-//             tail->next = newnode;
-//             tail= newnode;
-//         }
-//         i++;
-//     }
-//     return head;
+node* linked_list(node*head){
+    int pow;
+    float c;
+    int size;
+    cout<<"ENter your size "<<endl;
+    cin>>size;
+    int i=0;
+    node* tail = NULL;
+    while(i<size){
+        cout<<"Enter your coefficient "<<endl;
+        cin>>c;
+        cout<<"ENter your Power of "<<endl;
+        cin>>pow;
+        node* newnode = new node(pow,c);
+        if(head == NULL){
+            head = newnode ;
+            tail = newnode;
+        }
+        else{
+            tail->next = newnode;
+            tail= newnode;
+        }
+        i++;
+    }
+    return head;
 
-// }
+}
 
-// node* ADDpoly(node* head1 ,node* head2){
-//     node* p1= head1;
-//     node* p2 = head2;
+node* ADDpoly(node* head1 ,node* head2){
+    node* p1= head1;
+    node* p2 = head2;
 
-//     node* tail = NULL;
-//     node* head = NULL;
-//     while( p1!= NULL){
-//         if(p2->power == p1->power){
-//             int sum = p1->coif+p2->coif;
-//             node* newnode = new node(p2->power,sum);
-//             if(head == NULL){
-//                 head = newnode;
-//                 tail = newnode;
-//             }
-//             else{
-//                 tail->next = newnode;
-//                 tail = newnode;
-//             }
-//             p2 = p2->next;
-//             p1= p1->next;
-
-//         }
-//         else{
-//             node* newnode = new node(p1->power,p1->coif);
-//             tail->next = newnode;
-//             tail = newnode;
-//             p1= p1->next;
-//         }
-//     }
-
-//     while(p2!=NULL){
-//         node* newnode =new node(p2->power,p2->coif);
-//         tail->next = newnode;
-//         tail = newnode;
-//         p2 = p2->next;
-//     }
-//     while(p1!=NULL){
-//         tail->next = p1;
-//         tail = p1;
-//         p1= p1->next;
-
-//     }
-//     return head;
-// }
-// void print(node* head){
-//     node* temp = head;
-//     while(temp != NULL){
-//         if(temp->coif > 0 || temp->coif == 0){
-//             // cout<<"+"<<temp->coif<<"(x"<< "^"<<temp->power<<")"<<" ";
-//             cout<<"["<<temp->power<<"|"<<temp->coif<<"]"<<"-->";
-//         }
-//         if(temp->coif < 0 ){
-//             // cout <<temp->coif<<"(x"<<"^"<<temp->power<<")"<<" ";
-//             cout<<"["<<temp->power<<"|"<<temp->coif<<"]"<<"-->";
+    node* tail = NULL;
+    node* head = NULL;
+    while( p1!= NULL){
+        if(p2->power == p1->power){
+            int sum = p1->coif+p2->coif;
+            node* newnode = new node(p2->power,sum);
             
-//         }
-//         temp = temp->next;
-//     }
-//     cout<<"x";
-// }
+            if(head == NULL){
+                head = newnode;
+                tail = newnode;
+            }
+            else{
+                tail->next = newnode;
+                tail = newnode;
+            }
+            p2 = p2->next;
+            p1= p1->next;
 
-// int main(){
-//     node* head1 = NULL;
-//     node* EQN1 = linked_list(head1);
-//     print(EQN1);
-//     node* head2 = NULL;
-//     node* EQN2= linked_list(head2);
-//     print(EQN2);
-//     cout<<endl;
-//     node* ans  = ADDpoly(EQN1,EQN2);
-//     print(ans);
-//     return 0;
-// }
+        }
+        else{
+            node* newnode = new node(p1->power,p1->coif);
+            tail->next = newnode;
+            tail = newnode;
+            p1= p1->next;
+        }
+    }
+
+    while(p2!=NULL){
+        node* newnode =new node(p2->power,p2->coif);
+        tail->next = newnode;
+        tail = newnode;
+        p2 = p2->next;
+    }
+    while(p1!=NULL){
+        tail->next = p1;
+        tail = p1;
+        p1= p1->next;
+
+    }
+    return head;
+}
+void print(node* head){
+    node* temp = head;
+    while(temp != NULL){
+        if(temp->coif > 0 || temp->coif == 0){
+            // cout<<"+"<<temp->coif<<"(x"<< "^"<<temp->power<<")"<<" ";
+            cout<<"["<<temp->power<<"|"<<temp->coif<<"]"<<"-->";
+        }
+        if(temp->coif < 0 ){
+            // cout <<temp->coif<<"(x"<<"^"<<temp->power<<")"<<" ";
+            cout<<"["<<temp->power<<"|"<<temp->coif<<"]"<<"-->";
+            
+        }
+        temp = temp->next;
+    }
+    cout<<"x";
+}
+
+int main(){
+    node* head1 = NULL;
+    node* EQN1 = linked_list(head1);
+    print(EQN1);
+    node* head2 = NULL;
+    node* EQN2= linked_list(head2);
+    print(EQN2);
+    cout<<endl;
+    node* ans  = ADDpoly(EQN1,EQN2);
+    print(ans);
+    return 0;
+}
+*/

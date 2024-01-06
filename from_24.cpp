@@ -816,28 +816,30 @@ using namespace std;
 
 // Reverse of string
 
-// void reverse(string str,int i,int j,int n){
-//   if(i>j){
+// void reverse(string str, int i, int j, int n)
+// {
+//   if (i > j)
+//   {
 //     return;
 //   }
 
-//   swap(str[i],str[j]);
+//   swap(str[i], str[j]);
 //   i++;
 //   j--;
-//   reverse(str,i,j,n);
+//   reverse(str, i, j, n);
 
-//   cout<<str<<" ";
-
+//   cout << str << " ";
 // }
-// int main(){
-//   string  str;
-//   getline(cin,str);
-//   int len=str.length();
+// int main()
+// {
+//   string str;
+//   getline(cin, str);
+//   int len = str.length();
 
-//   int i=0;
-//   int j=len-1;
+//   int i = 0;
+//   int j = len - 1;
 
-//   reverse(str,i,j,len);
+//   reverse(str, i, j, len);
 
 //   return 0;
 // }
@@ -1038,7 +1040,7 @@ void merge_sort(int *arr, int start, int end)
   merge_sort(arr, mid + 1, end);
 
   // merge
-  
+
   merge(arr, start, end);
 }
 
@@ -1075,7 +1077,6 @@ int main()
 
 // Quick Sort  : -
 
-
 /*
 int partition(int arr[],int s,int e ){
 
@@ -1093,7 +1094,7 @@ int partition(int arr[],int s,int e ){
 
   int i=s;
   int j=e;
-  
+
   cout<<endl;
   while(i<pivotIndex && j>pivotIndex){
     //for less than or equal to pivot element
@@ -1108,10 +1109,10 @@ int partition(int arr[],int s,int e ){
 
     if(i<pivotIndex && j>pivotIndex){
     swap(arr[i++],arr[j--]);
-    } 
+    }
 
   }
-  
+
 
   return pivotIndex;
 
@@ -1130,7 +1131,7 @@ void quicksort(int arr[],int s,int e){
   //for left part sort
   quicksort(arr,s,p-1);
   //for right part
-  
+
   quicksort(arr,p+1,e);
 }
 
@@ -1881,7 +1882,6 @@ cout<<m1.setheight()<<endl;
 //   return 0;
 // }
 
-
 #include <iostream>
 #include <vector>
 
@@ -1930,24 +1930,23 @@ cout<<m1.setheight()<<endl;
 //     return 0;
 // }
 
-
 #include <iostream>
 using namespace std;
 
-/*
+
 void insertion_sort(int arr[], int n) {
     for (int i = 1; i < n; i++) {
         for (int j = 0; j < i; j++) {
             if (arr[i] < arr[j]) {
 
                 int temp = arr[i];
-                int k = i;
-                while (k > j) {
-                    arr[k] = arr[k-1];
-                    k--;
-                }
-                arr[k] = temp;
-            }
+                // int k = i;
+                // while (k > j) {
+                //     arr[k] = arr[k-1];
+                //     k--;
+                // }
+                // arr[k] = temp;
+              }
         }
     }
 }
@@ -1961,10 +1960,9 @@ int main() {
     cout << endl;
     return 0;
 }
-*/
+
 
 // Buccket Sort
-
 
 #include <iostream>
 #include <vector>
@@ -2040,7 +2038,6 @@ int main() {
 }
 */
 
-
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -2056,13 +2053,13 @@ int main() {
 //     return max;
 // }
 
-// // Using counting sort to sort elements based on significant places 
+// // Using counting sort to sort elements based on significant places
 // void countingSort(vector<int>& arr, int exp) {
 //     const int n = arr.size();
 //     vector<int> output(n, 0);
 //     vector<int> count(10, 0);
 
-//     // Count occurrences unit places is the present 
+//     // Count occurrences unit places is the present
 //     for (int i = 0; i < n; i++) {
 //         count[(arr[i] / exp) % 10]++;
 //     }
@@ -2098,7 +2095,7 @@ int main() {
 //     // Example usage
 //     // std::vector<int> arr = {170, 45, 75, 90, 802, 24, 2, 66};
 //     vector<int>arr = {3,6,1,8,4,2,0,5,12};
-    
+
 //     std::cout << "Original array: ";
 //     for (int num : arr) {
 //         std::cout << num << " ";

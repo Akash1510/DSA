@@ -752,4 +752,307 @@ public:
     }
 };
 
+*/
+
+
+// class Stack{
+//     public:
+//     int *arr;
+//     int top;
+//     int size;
+//     Stack(int n){
+//         size = n;
+//         arr = new int[size];
+//         top = -1;
+//     }
+//     bool is_empty(){
+//         if(top == -1){
+//             return 1;
+//         }
+//         else{
+//             return 0;
+//         }
+//     }
+
+//     bool is_Full()
+//     {
+//         if(top == size-1){
+//             return 1;
+//         }
+//         else{
+//             return 0;
+//         }
+//     }
+//     void push(int data){
+//         if(is_Full()){
+//             cout<<"Stack is Overflow "<<endl;
+//             return;
+//         }
+//         else{
+//             top++;
+//             arr[top] = data;
+//         }
+//     }
+
+//     int pop(){
+//         if(is_empty()){
+//             cout<<"Stack is UnderFlow "<<endl;
+//         }
+//         int ans = arr[top];
+//         arr[top] = -1;
+//         top--;
+
+//         return ans;
+//     }
+
+//     int Top(){
+//         if(is_empty()){
+//             return -1;
+//         }
+//         else{
+//             return arr[top];
+//         }
+//     }
+
+// };
+
+// int main(){
+//     Stack q(4);
+//     int e;
+//     for(int i= 0;i<4;i++){
+//         cin>>e;
+//         q.push(e);
+//     }
+//     while(!q.is_empty()){
+//         cout <<q.Top()<<endl;
+//         q.pop();
+//     }
+// }
+
+
+
+// class node{
+//     public:
+//     int data;
+//     node* next;
+//     node(int data){
+//         this->data = data;
+//         this->next = NULL;
+//     }
+//     ~node(){
+//         int value = this->data;
+//         if(this->next != NULL){
+//               this->next = NULL;
+//               delete next;
+//         }
+//         cout<<"the deleted is "<<value<<endl;
+//     }
+// };
+
+
+// class Stack{
+//     public:
+//     node* top;
+//     Stack(){
+//         top = NULL;
+//     }
+
+//    void push(int data){
+//     node* newnode = new node(data );
+//     if(top == NULL){
+//         top = newnode;
+//     }
+//     else{
+//         newnode->next = top;
+//         top = newnode;
+//     }
+//    }
+
+//    int pop(){
+//     if(top == NULL){
+//         return -1;
+//     }
+//     else{
+//         node* temp = top;
+//         top = top->next;
+//         delete temp;
+//     }
+//     return 1;
+//    }
+
+//    void Display(){
+//     node* temp = top;
+//     while(temp != NULL){
+//         cout <<temp->data<<" ";
+//         temp = temp->next;
+//     }
+//    }
+
+// };
+
+// int main(){
+//     Stack s;
+//     int e;
+//     for(int i =0 ;i<4;i++){
+//         cin>>e;
+//         s.push(e);
+//     }
+//     s.Display();
+// };
+
+// Prefix to INfix Evaluatio
+
+#include<math.h>
+
+
+// int perfix_Evalution(string s){
+//     stack<int>st;
+//     for(int i= s.length()-1;i>=0;i--){
+//         if(s[i]>='0' && s[i]<='9'){
+//         st.push(s[i]-'0');
+
+//         }
+//     else{
+//         int op1 = st.top();
+//         st.pop();
+//         int op2 = st.top();
+//         st.pop();
+//         switch (s[i])
+//         {
+//         case '+':
+//             st.push(op1+op2);
+//             break;
+//         case '-':
+//             st.push(op1-op2);
+//             break;
+//         case '*':
+//             st.push(op1*op2);
+//             break;
+//         case '/':
+//              st.push(op1/op2);
+//              break;
+//         case '^':
+//             st.push(pow(op1,op2));
+//             break;
+//         }
+//     }
+
+//     }
+//     return st.top();
+    
+// }
+// int main(){
+//   cout <<  perfix_Evalution("-+16^23*104*163")<<endl;
+// }
+
+// postfix to infix
+
+
+// int Postfix_Evalution(string s){
+//     stack<int>st;
+//     for(int i=0;i<s.length();i++){
+//         if(s[i]>='0' && s[i]<='9'){
+//             st.push(s[i] - '0');
+//         }
+//         else{
+//             int op1 = st.top();
+//             st.pop();
+//             int op2 = st.top();
+//             st.pop();
+//             switch (s[i])
+//             {
+//             case '+':
+//                 st.push(op1+op2);
+            
+//                 break;
+//             case '-':
+//                 st.push(op1-op2);
+            
+//                 break;
+//             case '*':
+//                 st.push(op1*op2);
+            
+//                 break;
+//             case '/':
+//                 st.push(op1/op2);
+            
+//                 break;
+//             case '^':
+//                 st.push(pow(op1,op2));
+            
+//                 break;
+//             }
+//         }
+//     }
+//     return st.top();
+// }
+// int main(){
+//   cout<<Postfix_Evalution("-+16^23*104*163")<<endl;
+// }
+
+
 /*
+#include <bits/stdc++.h>
+using namespace std;
+
+void inputStack(stack<int> &st) {
+    int size;
+    cout << "Enter the size : ";
+    cin >> size;
+
+    cout << "Enter stack elements : ";
+    for(int i=0; i<size; i++) {
+        int temp;
+        cin >> temp;
+        st.push(temp);
+    }
+}
+
+void printStack(stack<int> st) {
+    cout << "Stack : ";
+    while(!st.empty()) {
+        cout << st.top() << " ";
+        st.pop();
+    }
+    cout << endl;
+}
+
+void insertSorted(stack<int> &st, int data) {
+    if(st.empty() || (!st.empty() && st.top() <= data)) {
+        st.push(data);
+        return;
+    }
+
+    int top = st.top();
+    st.pop();
+
+    insertSorted(st, data);
+    st.push(top);
+}
+
+void sortStack(stack<int> &st) {
+    if(st.empty()) {
+        return;
+    }
+
+    int top = st.top();
+    st.pop();
+
+    sortStack(st);
+    insertSorted(st, top);
+}
+
+int main() {
+    stack<int> st;
+    inputStack(st);
+
+    cout << "Before Sorting : ";
+    printStack(st);
+
+    sortStack(st);
+
+    cout << "After Sorting : ";
+    printStack(st);
+    return 0;
+}
+*/

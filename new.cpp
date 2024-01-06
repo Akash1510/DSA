@@ -8,7 +8,6 @@ using namespace std;
 //     for(int i=0;i<size; i++){
 //         cout<<Arr[i]<<" ";
 
-
 //     }
 //     cout<<"th printing  done "<<endl;
 
@@ -24,54 +23,52 @@ using namespace std;
 // }
 
 // int main(){
-    // declare
-    // int number[9];
-    // cout<<"value of index " <<number[3];
-    // cout<<"value of index " <<number[20];
-    // cout<<"Everything is fine"<<endl<<endl;
+// declare
+// int number[9];
+// cout<<"value of index " <<number[3];
+// cout<<"value of index " <<number[20];
+// cout<<"Everything is fine"<<endl<<endl;
 
-    // initializing the array
+// initializing the array
 
-    // int second[3]={1,2,4};
-    // cout<<"the value of array is "<<second[0]<<endl;
-    // int third[14]={2,3};
-    // cout<<third[0]<<endl;
-    // by function access the/ array
-    // int third[12]={2,3};
-    // int n=15;
-    // printarray(third,n);
-    // cout<<"the size of array is "<<sizeof(third)/sizeof(int);   //how much length is thst i can find out but actual present element length not found
-    // initiallizing array with 0  its possible initializing with 1 is not possible
+// int second[3]={1,2,4};
+// cout<<"the value of array is "<<second[0]<<endl;
+// int third[14]={2,3};
+// cout<<third[0]<<endl;
+// by function access the/ array
+// int third[12]={2,3};
+// int n=15;
+// printarray(third,n);
+// cout<<"the size of array is "<<sizeof(third)/sizeof(int);   //how much length is thst i can find out but actual present element length not found
+// initiallizing array with 0  its possible initializing with 1 is not possible
 
-    // int Arr[5]={1};
-    // int s=5;
-    // printarray(Arr,s);
+// int Arr[5]={1};
+// int s=5;
+// printarray(Arr,s);
 
+// the array of other data type
 
-    // the array of other data type
+// char ch[5]={'a','k','a','s','h'};
+// int v=5;
+// display(ch,v);
 
-    // char ch[5]={'a','k','a','s','h'};
-    // int v=5;
-    // display(ch,v);
+// double firstDouble[5]={1.23,1.33,232.433};
+// cout<<firstDouble[0];
+// float j[5]={1.2,2.4,4.3,2,8};
+// cout<<"the value of array is "<<j[0];
 
-    // double firstDouble[5]={1.23,1.33,232.433};
-    // cout<<firstDouble[0];
-    // float j[5]={1.2,2.4,4.3,2,8};
-    // cout<<"the value of array is "<<j[0];
+// bool t[3]={true,0,false};
+// cout<<"the value of the of the bool is "<<t[2];
 
-    // bool t[3]={true,0,false};
-    // cout<<"the value of the of the bool is "<<t[2];
+// cout<<"every thing is fine"<<endl;
 
-    // cout<<"every thing is fine"<<endl;
-
-    
 //     return 0;
 
 // }
 
 // int getmax(int num[],int n){
 //     int max=__INT_MAX__;
-    
+
 //     for(int i=0;i<n;i++){
 //         if(num[i]>max){
 //             max=num[i];
@@ -105,7 +102,6 @@ using namespace std;
 
 //     return 0;
 
-    
 //}
 
 // linear search
@@ -133,9 +129,8 @@ using namespace std;
 //      else{
 //         cout<<"Key is not present"<<endl;
 //      }
-//      return 0;  
+//      return 0;
 // }
-
 
 // Reverse of Aarray
 
@@ -158,21 +153,18 @@ using namespace std;
 // int main(){
 //     // int arr[5]={1,23,45,6,7};
 //     int Arr[8]={1,23,45,6,7,90,56,12};
-    
 
 //     // int n;
 //     // cout<<"Enter your Array size"<<endl;
 //     // cin>>n;
-    
+
 //     // reverse(arr,n);
 //     reverse(Arr,8);
 //     // printarray(arr,n);
 //     printarray(Arr,8);
 
-
 //     return 0;
 // }
-
 
 // void reverse(int Arr[],int n){
 //     int start=0;
@@ -196,7 +188,6 @@ using namespace std;
 //     // int Arr[6]={1,4,0,5,-2,15};
 //     int Arr[8]={1,23,45,6,7,90,56,12};
 
-    
 //     reverse(Arr,8);
 //     printarray(Arr,8);
 //     return 0;
@@ -242,8 +233,6 @@ using namespace std;
 //     }
 // }
 
-
-
 // int main(){
 //     int even[8]={12,34,56,78,80,54,33,3};
 //     swappAternate(even , 8);
@@ -252,9 +241,7 @@ using namespace std;
 
 // }
 
-
 // Unique element :
-
 
 // int finduniqeElement(int arr[],int n){
 //     int ans=0;
@@ -271,17 +258,13 @@ using namespace std;
 //     return 0;
 // }
 
-
-
-
-
 // unique occurance of an element present :
 
 // void occurance(int arr[],int n){
 //     int brr[n];
 //     int c[n];
 //     int count=1;
-//     for(int i=0;i<n;i++){    
+//     for(int i=0;i<n;i++){
 //         count-=count;
 //         for(int j=0;j<n;j++){
 //             if((arr[i]^arr[j])==0)
@@ -289,21 +272,18 @@ using namespace std;
 //             brr[i]=arr[i];
 //             c[i]=count;
 
-
 //         }
-    
 
 //     }
 //     for( int i =0 ;i<n;i++){
 //         if(brr[i]!=brr[i+1] && c[i]!=c[i+1]){
 //             // cout<<brr[i]<<endl;
-            
+
 //         cout<<"the element of array   "<< brr[i]<<endl;
 //         cout<<"the array element occurance is unique "<<c[i]<<endl;
-        
+
 //         }
-        
-         
+
 // }
 // }
 // int main(){
@@ -317,12 +297,10 @@ using namespace std;
 
 // }
 
-
 // Duplicate element  0 to n-1;
 
 // void dupli(int arr[],int n){
 //     int ans=0;
-
 
 //     for(int i=0;i<n;i++){
 //     ans=ans^(arr[i]);
@@ -331,15 +309,14 @@ using namespace std;
 //     for(int j=0;j<n;j++){
 //         ans=ans^j;
 //     }
-    
+
 //     cout<< ans;
-    
+
 // }
 // int main(){
 //     int arr[7]={4,2,1,3,1,8,8};
 //     int size=7;
 //     dupli(arr,size);
-    
 
 // }
 
@@ -353,7 +330,7 @@ using namespace std;
 
 //             b[i]=arr[i];
 //             cout<<"[ "<<b[i]<<" ]"<<" ";
-            
+
 //             }
 //         }
 //     }
@@ -367,14 +344,11 @@ using namespace std;
 //     cout<<"Enter your Size"<<endl;
 
 //     cin >> size;
-     
+
 //     Dupli(arr,size);
 //     return 0;
 
 // }
-
-
-
 
 // intersection of two element
 
@@ -387,23 +361,20 @@ using namespace std;
 //     cin>>n;
 
 //     for(int i=0;i<7;i++){
-//         for (int j=0;j<7;j++){ 
+//         for (int j=0;j<7;j++){
 //             if(arr1[i]==arr2[j]){
 //                 arr3[i]=arr1[i];
 //                 cout<<"[ " <<arr3[i]<<" ] ";
-//             } 
+//             }
 //             // else if(arr1[i]!=arr2[j]){
-            
-                
+
 //             // }
 //         }
 
 //     }
-    
+
 //     return 0;
 // }
-
-
 
 // Find the  two pair whose sum is 5
 // int main(){
@@ -413,14 +384,13 @@ using namespace std;
 //             if((sum[i]+sum[j])==5){
 //                 cout<<"( "<<sum[i]<<" "<<sum[j]<<" )";
 //             }
-            
+
 //         }
 //     }
 //     return 0;
 // }
 
 // for Triple pair sum is 12
-
 
 // int main(){
 //     int sum[6]={1,2,4,6,3};
@@ -437,8 +407,6 @@ using namespace std;
 //     return 0;
 // }
 
-
-
 // Sorting 0 and 1
 
 // int main(){
@@ -448,12 +416,12 @@ using namespace std;
 //     //Enter the size 0
 //     cout<<"Apply the first Loop"<<endl;
 //     int count = 1;
-//      //this for Right side 
+//      //this for Right side
 //     for(int i=0;i<size;i++){
 //         if(arr[n]==arr[i]){
 //             brr[size-count]=arr[i];
 //             count++;
-            
+
 //         }
 //     }
 
@@ -469,7 +437,6 @@ using namespace std;
 
 // //    NOW Print The array /
 
-
 // for(int i=0;i<size;i++){
 // cout<<"[ "<<brr[i]<<" ]" ;
 
@@ -477,7 +444,6 @@ using namespace std;
 // }
 //     return 0;
 // }
-
 
 // Homework quetions
 
@@ -488,13 +454,12 @@ using namespace std;
 //     //enter the present array element size 3
 //     for(int i=0;i<n;i++){
 //         cin>>brr[i];
-    
 
 //     }
 //     int f[9];
 //     int count=0;
 //     for(int i=0;i<n;i++)
-// {   
+// {
 //     for(int j=0;j<9;j++){
 //         if(brr[i]==arr[j]){
 //             f[count]=arr[j];
@@ -514,7 +479,6 @@ using namespace std;
 
 // }
 
-
 // note
 // Every time After the deltion the Array size will be decreses n=n-1
 // delete the Array element from begin   n=n-1
@@ -529,18 +493,15 @@ using namespace std;
 //     int n;
 //     cin>>n;
 //     cout<<"the array after deleted element from beginning "<<arr[0]<<endl;
-    
+
 //     for(int i=0;i<(n-1);i++){
 //         cout<<(arr[i]=arr[i+1])<<endl;
-    
+
 //     }
 //     return 0;
 // }
 
-
-
 // By Using the Location delete an Element
-
 
 // int main(){
 //     int arr[4]={2,4,6,8};
@@ -566,18 +527,15 @@ using namespace std;
 
 // }
 
-
-
 // New Topic -- Array (  Binary Search   )
 
 // pg 1:
-
 
 // int binarysearch(int arr[],int size,int key){
 //     //set the position for entire Array
 //     int start =0;
 //     int end=size-1;
-//     //find mid element Index 
+//     //find mid element Index
 //     int mid= start+(end-start)/2;
 
 //     while(start<=end){
@@ -591,7 +549,7 @@ using namespace std;
 //             start=mid+1;
 //         }
 //         else{
-//             //left of Array from mid 
+//             //left of Array from mid
 //             end=mid-1;
 
 //         }
@@ -600,7 +558,6 @@ using namespace std;
 
 //     }
 //         return -1;
-
 
 // }
 
@@ -618,7 +575,6 @@ using namespace std;
 //     return 0;
 // }
 
-
 // Quetion 2  --- peak in Mountain
 
 // int peak(int arr[],int n){
@@ -626,14 +582,14 @@ using namespace std;
 //     int start=0;
 //     int end=n-1;
 
-//     //finding the Mid of Index At present element 
+//     //finding the Mid of Index At present element
 
 //     int mid=start+(end-start)/2;
 
-//     //Comparing Mid 
+//     //Comparing Mid
 //     while(start<=end){
 //         if(arr[mid]<arr[mid+1]){
-//             start=mid+1;    // next element in from mid for cheacing purpose  
+//             start=mid+1;    // next element in from mid for cheacing purpose
 
 //         }
 //         else{
@@ -643,9 +599,6 @@ using namespace std;
 //             mid=start+(end-start)/2;
 //     }
 //         return start;
-
-
-
 
 // }
 
@@ -659,7 +612,6 @@ using namespace std;
 //     return 0;
 
 // }
-
 
 // Quetion 3/  Pivot in array  (binary search)
 
@@ -678,9 +630,8 @@ using namespace std;
 //         }
 //         mid=start+(End-start)/2;
 
-        
 //     }
-//     // return arr[start] ; 
+//     // return arr[start] ;
 //      // give he Index that element is present
 //      return start;
 // }
@@ -691,8 +642,6 @@ using namespace std;
 //     return 0;
 
 // }
-
-
 
 // Quetion 4: Search In Sorted Rotated Array
 
@@ -707,7 +656,6 @@ using namespace std;
 //             end=mid;
 //         }
 //         mid=start+(end-start)/2;
-
 
 //     }
 //     return start;
@@ -751,7 +699,6 @@ using namespace std;
 //     return 0;
 // }
 
-
 // Find the square root of Element using binary search
 
 // long long int squrtInteger(int n){
@@ -776,7 +723,7 @@ using namespace std;
 
 //         }
 //     mid=s+(e-s)/2;}
-    
+
 //     return ans;
 // }
 
@@ -786,7 +733,6 @@ using namespace std;
 //     double ans =tempsol;
 //     for (int i=0;i<percision;i++){
 //         factor=factor/10;
-
 
 //     }
 //     for(double j=ans;j*j<n; j=j+factor){
@@ -806,14 +752,12 @@ using namespace std;
 //     return 0;
 // }
 
-
 // very Important Book Allocation
 
 // bool is_possible(int arr[],int n,int m ,int mid){
 //     int studentcount=1;
 
 //     int pagesum=0;
-    
 
 //     // Apply the loop
 
@@ -829,7 +773,7 @@ using namespace std;
 //                 return false;
 //             }
 //             pagesum=arr[i];
-        
+
 //             cout<<pagesum<<endl;
 
 //         }
@@ -854,7 +798,7 @@ using namespace std;
 //         if(is_possible(arr, n, m, mid)){
 //             ans=mid;
 //             e=mid-1;
-        
+
 //         }
 //         else{
 //           s=mid+1;
@@ -863,11 +807,9 @@ using namespace std;
 //         mid=s+(e-s)/2;
 //     }
 
+//   return ans;
 
-//   return ans;  
-    
 // }
-
 
 // int main(){
 //     int arr[4] = {10,20,30,40};
@@ -877,14 +819,12 @@ using namespace std;
 //     cin>>student;
 //     cout<<"Enter your Number of books "<<endl;
 //     cin>>n;
-//     //to find the mid of Array is 
+//     //to find the mid of Array is
 //     int start=1;
 //     int end=100;
 
-
 //    int  MId=start+(end-start)/2;
 //     cout<<MId;
-
 
 //     int allocation=is_possible(arr,n,student,MId);
 //     cout<<allocation<<endl;
@@ -895,11 +835,7 @@ using namespace std;
 
 // Painters Partition quetion
 
-
 //  Quetion Aggresive cow
-
-
-
 
 // New Topic  Sorting
 
@@ -927,46 +863,47 @@ using namespace std;
 //         cout<<arr[i]<<" ";
 //     }
 //     cout<<" ]";
- 
 
 //     return 0;
 // }
-
-
 
 // Bubble Sort
 
-// int main(){
-//     int arr[5]={12,11,23,45,34};
+int main()
+{
+    int arr[5] = {12, 11, 23, 45, 34};
 
-//     int n;
-//     cout<<"Enter your Array Size"<<endl;
-//     cin>>n;
-    
-//     for(int i=1;i<n;i++){
-//         //for round 1 to n-1
-//         bool swapped =false;
-//         for(int j=0;j<n-i;j++){
-//             //process element till n-i th Index
-//             if(arr[j]>arr[j+1]){
-//             //we write like this block 
-//             swap(arr[j],arr[j+1]);
-//             swapped =true;
-//             }  
-                
-//         }
-//     if(swapped==false){
-//         //Already sorted
-//         break;
-//     }
-//     }
+    int n;
+    cout << "Enter your Array Size" << endl;
+    cin >> n;
 
-//     for(int i=0;i<n;i++)
-//     {
-//         cout<<arr[i]<<" ";
-//     }
-//     return 0;
-// }
+    for (int i = 1; i < n; i++)
+    {
+        // for round 1 to n-1
+        bool swapped = false;
+        for (int j = 0; j < n - i; j++)
+        {
+            // process element till n-i th Index
+            if (arr[j] > arr[j + 1])
+            {
+                // we write like this block
+                swap(arr[j], arr[j + 1]);
+                swapped = true;
+            }
+        }
+        if (swapped == false)
+        {
+            // Already sorted
+            break;
+        }
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    return 0;
+}
 
 // bubble sort is working on the element by element one to next
 
@@ -980,7 +917,7 @@ using namespace std;
 //      for (int i=1;i<n;i++)
 //      {
 //         int temp=arr[i];
-//         int j=i-1;        
+//         int j=i-1;
 //         while(j>=0)
 //         {
 //             if(arr[j]>temp)
@@ -1005,12 +942,9 @@ using namespace std;
 //   return 0;
 // }
 
-
 // For the stl Go to raplit
 
-
-
-// insert the element 
+// insert the element
 // int main(){
 //     int arr[5]={2,4,5,7,9};
 
@@ -1022,7 +956,7 @@ using namespace std;
 //     int loc;
 //     cin>>loc;
 
-//     //space creation 
+//     //space creation
 //     for(int i=n-1;i>=loc-1;i--){
 //         arr[i+1]=arr[i];
 
@@ -1031,14 +965,13 @@ using namespace std;
 //     // insert the element at
 //     arr[loc-1]=89;
 
-//     // print the Array 
+//     // print the Array
 
 //     for(int i=0;i<n+1;i++){
 //         cout<<arr[i+1]<<" ";
 //     }
 
 // }
-
 
 // class Average{
 //     int num1;
@@ -1078,11 +1011,10 @@ using namespace std;
 // int main(){
 //     week day;
 //     day=mon;
-  
+
 //     cout<<day;
 //     return 0;
 // }
-
 
 // int main(){
 
@@ -1090,12 +1022,11 @@ using namespace std;
 //     do{
 //         i++;
 //         cout<<i<<endl;
-//     }   
-    
-//     while(i<5);
-//     return 0;   
-// }
+//     }
 
+//     while(i<5);
+//     return 0;
+// }
 
 // #include <string>
 
@@ -1103,21 +1034,19 @@ using namespace std;
 //     string s1("Akash");
 //     string s2("Rohan");
 //     // cout<<s1+s2;
-//     //nowinserting  the new String 
+//     //nowinserting  the new String
 //     s1.insert(0,s2);
 //     cout<<" "<<s1<<" ";
-//     //erase the Anything in string 
+//     //erase the Anything in string
 //     s1.erase(0,1);
 //     cout<<s1<<endl;
-//     //replaceing the Elment is string 
+//     //replaceing the Elment is string
 //     s1.replace(1,2,s2);
 //     cout<<s1;
 //     return 0;
 // }
 
-
-
-// function overloading 
+// function overloading
 
 // void swap(int m,int n);
 // void swap(float k,float l);

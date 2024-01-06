@@ -3,25 +3,98 @@
 using namespace std;
 
 
+// Graph Implimentation using the Adjanancy list
+// undirected graph
+/*
+
+class Graph{
+    public:
+    map<int,list<int>>adj_list;
+
+    void addVertex(int v){
+        if(adj_list.find(v) == adj_list.end()){
+            adj_list[v] = list<int>();  // represents the empty list 
+
+        }
+    }
+
+    void AddEdges(int v1,int v2){
+        if(v1 != -1 &&  v2 != -1){
+        adj_list[v1].push_back(v2);
+        adj_list[v2].push_back(v1);
+
+        }
+        else{
+            return;
+        }
+    }
+
+    void print(){
+        for(auto i: adj_list){
+            cout<<i.first<<" ->";
+            for(auto j:i.second){
+                cout<<j<<" ";
+            }
+            cout<<endl;
+        }
+        
+    }
+};
+int main(){
+    Graph g;
+    g.addVertex(1);
+    g.addVertex(2);
+    g.addVertex(3);
+    g.addVertex(4);
+
+    
+    int v1,v2;
+    cout<<"Enter your Edges in between Vertexx "<<endl;
+    while(v1!= -1 && v2 != -1){
+        cin>>v1>>v2;
+        g.AddEdges(v1,v2);
+    }
+
+    g.print();
+
+}
+*/
+
+
+
+// Graph Implementaion Using the Directed Graph 
+ 
+ class Graph{
+    public:
+
+ }
 
 // Creation of the Graph
 
+
 /*
+
 vector<vector<int>> printadjency(int n, int m,vector<vector<int>>&edges){
 
         vector<vector<int>>solution(n);
-        for(int i=0;i<n;i++){
-            solution[i].push_back(i);
-        }
-
-        for(int i=0;i<n;i++){
+        for(int  i =0;i<m;i++){
             int u = edges[i][0];
             int v = edges[i][1];
-
             solution[u].push_back(v);
             solution[v].push_back(u);
+
         }
-        return solution;
+        vector<vector<int>>ans(n);
+        for(int i = 0;i<n;i++){
+            ans[i].push_back(i);
+
+            for(int  j = 0;j<ans[i].size();j++)
+            {  
+                ans[i].push_back(ans[i][j]);
+
+            }
+        }
+        return ans;
 }
 
 
@@ -39,21 +112,27 @@ int main(){
             cin>>edges[i][1];    
     }
     
-    vector<vector<int>>solution  = printadjency(n,m,edges);
+vector<vector<int>>solution  = printadjency(n,m,edges);
     
     for(auto i:solution){
-        for(auto j:i){
+        for(auto j:i)
+
+        {
             cout<<j<<" ";
         }
         cout<<endl;
     }
-    return 0;
+   return 0;
 }
+
 
 */
 
 
+
 //Creation Of Adjency List
+
+
 /*
 class Graph{
     public:
@@ -113,15 +192,8 @@ int main(){
         g.addedge(u,v,0);
     }
     //printing the graph
-    g.printadj();
+    // g.printEdges();
     return 0;
-
 }
-
-
 */
-
-
-
-
-
+    

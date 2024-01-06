@@ -946,7 +946,7 @@ int main(){
 // }
 
 // using Linked List/
-/*
+
 class node{
   public:
   int data;
@@ -970,20 +970,20 @@ class Queue{
 
   void push(int data){
     node* newnode  = new node(data);
-    if(rear == NULL){
+    if(front == NULL){
       rear = newnode;
       front = newnode;
     }
     else{
-      rear->next = newnode;
-      rear = newnode;
+       newnode->next = front;
+       front = newnode;
     }
     
    }
 
-   void pop(){
+   int  pop(){
     if(front  == NULL){
-      return;
+      return -1;
     }
 
     else{
@@ -991,6 +991,7 @@ class Queue{
       front = front->next;
       delete temp;
     }
+    return 1;
 
    }
 
@@ -1030,7 +1031,7 @@ int main(){
     q.pop();
   }
 }
-*/
+
 
 
 // class Dequeue{
@@ -1509,7 +1510,7 @@ class Priority_queue{
 
 
 //priority Queue
-
+/*
 class Priority_queue{
   public:
   int *arr;
@@ -1605,3 +1606,4 @@ int main(){
   }
   return 0;
 }
+*/

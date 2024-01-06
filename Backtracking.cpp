@@ -74,7 +74,7 @@ int main(){
 
 
 // N Queen Problem
-/*
+
 
 void addsolution(vector<vector<int>>&ans,vector<vector<int>>&board,int n){
     vector<int>temp;
@@ -155,11 +155,12 @@ int  main(){
     for(auto i:ans){
         for(auto j :i){
             cout<<j<<" ";
+        
         }
         cout<<endl;
     }
 }
-*/
+
 
 
 // Sudoku solver
