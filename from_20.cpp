@@ -355,7 +355,7 @@ using namespace std;
 //     int count =0;
 //     for(int i=0;(name[i])!='\0';i++){
 
-//         count ++;
+//         count ++; 
 
         
 //     }
@@ -575,45 +575,47 @@ using namespace std;
 
 // replace the All spaces
 
-//  void replace(string str,int n){
+/*
+ void replace(string str,int n){
 
-//     //to check the given srtring lies in lower or upper case
-//     for(int i=0;i<n;i++){
-//         if(str[i]>='a' && str[i]<='z')
-//         {
-//           str[i];
-//         }
-//         else{
-//             str [i]=str[i]-'A'+'a';
-//             // cout<<str[i];
+    //to check the given srtring lies in lower or upper case
+    for(int i=0;i<n;i++){
+        if(str[i]>='a' && str[i]<='z')
+        {
+          str[i];
+        }
+        else{
+            str [i]=str[i]-'A'+'a';
+            // cout<<str[i];
             
-//         }
-//     }
+        }
+    }
 
-//     for(int i=0;i<n;i++){
-//         if(str[i]==' ')
-//         {
-//            str='@';
-//             }
-//     }
+    for(int i=0;i<n;i++){
+        if(str[i] != ' ')
+        {
+           str='@';
+            }
+    }
     
-//     for(int i=0;i<n;i++){
-//         cout<<str[i];
-//     }
+    for(int i=0;i<n;i++){
+        cout<<str[i];
+    }
 
 
-// }
-// int main(){
-//     cout<<"Enter your String "<<endl;
-//     string str;
-//     getline(cin,str);
-//     //now find the length of the string 
-//     int len = str.length();
-//     replace(str,len);
+}
+int main(){
+    cout<<"Enter your String "<<endl;
+    string str;
+    getline(cin,str);
+    //now find the length of the string 
+    int len = str.length();
+    replace(str,len);
     
-//     return 0;
+    return 0;
 
-// }
+}
+*/
 
 
 // remove All same occurance of the substring
@@ -1071,150 +1073,149 @@ using namespace std;
 // spiral print of Array
 
 
-// void spiral(int arr[][3],int rows,int cols){
-//     int k=0;
-//     int ans[k];
-//     int count=0;
-//     int total=rows*cols;
+void spiral(int arr[][3],int rows,int cols){
+    int k=0;
+    int ans[k];
+    int count=0;
+    int total=rows*cols;
 
-//     int startingRow=0;
-//     int endingRow=rows-1;
-//     int startingCol=0;
-//     int endingCol=cols-1;
+    int startingRow=0;
+    int endingRow=rows-1;
+    int startingCol=0;
+    int endingCol=cols-1;
 
-//     while(count<total){
-//         //print the element in starting row
+    while(count<total){
+        //print the element in starting row
 
-//         for(int index=startingCol;count<total && index<=endingCol;index++)
-//         {
-//             ans[k]=arr[startingRow][index];
-//             k++;
-//             count++;
-//         }
-//         startingRow++;
+        for(int index=startingCol;count<total && index<=endingCol;index++)
+        {
+            ans[k]=arr[startingRow][index];
+            k++;
+            count++;
+        }
+        startingRow++;
 
-//         //print the element in last coloumn
+        //print the element in last coloumn
 
-//         for(int index=startingRow;count<total && index<=endingRow;index++){
-//             ans[k]=arr[index][endingCol];
-//             k++;
-//             count++;
-//         }
-//         endingCol--;
+        for(int index=startingRow;count<total && index<=endingRow;index++){
+            ans[k]=arr[index][endingCol];
+            k++;
+            count++;
+        }
+        endingCol--;
 
-//         //now print the ending row
-//         for(int index=endingCol;count<total && index>=startingCol;index--){
-//             ans[k]=arr[endingRow][index];
-//             k++;
-//             count++;
+        //now print the ending row
+        for(int index=endingCol;count<total && index>=startingCol;index--){
+            ans[k]=arr[endingRow][index];
+            k++;
+            count++;
 
-//         }
-//         endingRow--;
+        }
+        endingRow--;
 
-//         //print the staring col
+        //print the staring col
 
-//         for(int index=endingRow; count<total && index>=startingRow;index--){
-//             ans[k]=arr[index][startingCol];
-//             k++;
-//             count++;
+        for(int index=endingRow; count<total && index>=startingRow;index--){
+            ans[k]=arr[index][startingCol];
+            k++;
+            count++;
 
-//         }
-//         startingCol++;
+        }
+        startingCol++;
 
      
-//     }
-//     for(int i=0;i<k;i++){
+    }
+    for(int i=0;i<k;i++){
 
-//      cout<<ans[i]<<" ";
-//     }
+     cout<<ans[i]<<" ";
+    }
+    
+}
+
+int main(){
+    int arr[3][3];
+
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cin>>arr[i][j];
+
+
+        }
+
+    }
+
+    // printing the Array
+
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cout<<arr[i][j];
+        }
+        cout<<endl;
+    }
     
 
-
-
-// }
-
-// int main(){
-//     int arr[3][3];
-
-//     for(int i=0;i<3;i++){
-//         for(int j=0;j<3;j++){
-//             cin>>arr[i][j];
-
-
-//         }
-
-//     }
-
-//     // printing the Array
-
-//     for(int i=0;i<3;i++){
-//         for(int j=0;j<3;j++){
-//             cout<<arr[i][j];
-//         }
-//         cout<<endl;
-//     }
-    
-
-//     spiral(arr,3,3);
-//     return 0;
-// }
+    spiral(arr,3,3);
+    return 0;
+}
 
 
 // rotate the Array by 90 degree
 
-// void rotate(int arr[][3],int rows,int cols)
-// {
-//     int ans[3][3];
-//     int startingRow=0;
-//     int endindcol=cols;
+/*
+void rotate(int arr[][3],int rows,int cols)
+{
+    int ans[3][3];
+    int startingRow=0;
+    int endindcol=cols;
 
-//     for(int i=0;i<rows;i++){
-//         startingRow=0;
-//         endindcol--;
-//         for(int j=0 ;j<cols;j++){
-//             if(startingRow<rows && endindcol>=0){
+    for(int i=0;i<rows;i++){
+        startingRow=0;
+        endindcol--;
+        for(int j=0 ;j<cols;j++){
+            if(startingRow<rows && endindcol>=0){
 
-//             ans[startingRow][endindcol]=arr[i][j];
-//             startingRow++;
-//             }
+            ans[startingRow][endindcol]=arr[i][j];
+            startingRow++;
+            }
         
-//         }
-//     }
+        }
+    }
 
-//     for(int i=0;i<rows;i++){
-//         for(int j=0;j<cols;j++){
-//             cout<<ans[i][j]<<" ";
-//         }
-//         cout<<endl;
-//     }
-// }
+    for(int i=0;i<rows;i++){
+        for(int j=0;j<cols;j++){
+            cout<<ans[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
 
-// int main(){
-//     int arr[3][3];
+int main(){
+    int arr[3][3];
 
-//     // input of Array
+    // input of Array
 
-//     for(int i=0;i<3;i++){
-//         for(int j=0;j<3;j++){
-//             cin>>arr[i][j];
-//         }
-//     }
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cin>>arr[i][j];
+        }
+    }
 
-//     //print the Array
+    //print the Array
 
-//     cout<<"Your given Array "<<endl;
+    cout<<"Your given Array "<<endl;
 
-//     for(int i=0;i<3;i++){
-//         for(int j=0;j<3;j++){
-//             cout<<arr[i][j];
-//         }
-//         cout<<endl;
-//     }
+    for(int i=0;i<3;i++){
+        for(int j=0;j<3;j++){
+            cout<<arr[i][j];
+        }
+        cout<<endl;
+    }
 
-//     cout<<"Your Rotate Array "<<endl;
+    cout<<"Your Rotate Array "<<endl;
 
-//     rotate(arr,3,3);
-// }
+    rotate(arr,3,3);
+}
+*/
 
 
 
@@ -1531,4 +1532,3 @@ int main(){
 //     }
 
 //     return 0;
-// }

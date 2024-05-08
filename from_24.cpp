@@ -1940,12 +1940,12 @@ void insertion_sort(int arr[], int n) {
             if (arr[i] < arr[j]) {
 
                 int temp = arr[i];
-                // int k = i;
-                // while (k > j) {
-                //     arr[k] = arr[k-1];
-                //     k--;
-                // }
-                // arr[k] = temp;
+                int k = i;
+                while (k > j) {
+                    arr[k] = arr[k-1];
+                    k--;
+                }
+                arr[k] = temp;
               }
         }
     }

@@ -86,7 +86,7 @@ int main(){
 
 // Search  the node in BST;
 
-/*
+
 class node{
     public:
     int data;
@@ -185,7 +185,7 @@ int main(){
     return 0;
 
 }
-*/
+
 
 
 // find the maximum and Minimum Element and Deletion of node;

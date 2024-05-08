@@ -2246,6 +2246,7 @@ int main(){
 
 
 
+/*
 
 class node{
     public:
@@ -2375,7 +2376,7 @@ int main(){
     printformfront(listfront);
     return 0;
 }
-
+*/
 
 // addition of Two polynomials
 

@@ -99,3 +99,32 @@ int main(){
     return 0;
 }
 */
+
+
+
+
+//Hashing
+
+
+// class node{
+//     public:
+//     int data;
+//     node(){
+//         data = 0;
+//     }
+// };
+
+// class Hashing{
+//     public:
+//     node* data[100];
+//     string name;
+//     long int tel;
+//     int i;
+//     int index;
+
+//     Hashing(){
+//         this->i = 0;
+//         this->tel = 0;
+//     }
+// };
+
